@@ -1,0 +1,82 @@
+baseURL: "https://leovan.tech/"
+languageCode: "zh-cn"
+title: "范叶亮的技术小站 | Leo Van's Technology Website"
+googleAnalytics: "G-8VPQF5ZTVD"
+ignoreFiles: [
+  "\\.Rmarkdown$", "\\.Rmd$", "\\.knit\\.md$", "\\.utf8\\.md$",
+  "_files$", "_cache$", "\\.txt$", "\\.csv$", "\\.tsv$",
+  "\\.tgz$", "\\.tar$", "\\.gz$", "\\.zip$", "\\.npz$"]
+hasCJKLanguage: true
+enableEmoji: true
+rssLimit: 100
+
+disableKinds: ["taxonomy", "term"]
+
+permalinks:
+  open-source: "/open-source/:slug/"
+
+menu:
+  main:
+    - name: "开源项目"
+      url: "/open-source/"
+      weight: 1
+    - name: "关于"
+      url: "/about/"
+      weight: 2
+
+params:
+  title: "范叶亮的技术小站"
+  subtitle: "Leo Van's Technology Website"
+  author: "范叶亮 | Leo Van"
+  description: "范叶亮的技术小站 | Leo Van's Technology Website"
+  logo: "/images/web/avatar-light-theme.svg"
+  logoWidth: 150
+  footer: "Copyright &copy; 2017-{Year} [范叶亮 | Leo Van](https://leovan.me)"
+  licenseURL: "https://github.com/leovan/leovan.tech/blob/main/LICENSE"
+  googleAdsense: "ca-pub-2608165017777396"
+  indexSections: ["open-source"]
+
+  socialIcons:
+    - title: "个人主页"
+      icon: "/images/icons/house.svg"
+      url: "https://leovan.me"
+    - title: "Github"
+      icon: "/images/icons/github.svg"
+      url: "https://github.com/leovan/"
+    - title: "RSS"
+      icon: "/images/icons/rss.svg"
+      url: "/rss/"
+
+  jsCookieVersion: "3.0.0"
+  jsCookieCDN: "//cdnjs.cloudflare.com/ajax/libs"
+
+  clipboardjsVersion: "2.0.11"
+  clipboardjsCDN: "//cdnjs.cloudflare.com/ajax/libs"
+
+  prismjsVersion: "1.29.0"
+  prismjsCDN: "//cdnjs.cloudflare.com/ajax/libs"
+  prismjsPluginJS: ["autoloader", "show-language", "toolbar"]
+  prismjsPluginCSS: ["toolbar"]
+
+  mathjaxVersion: "3.2.2"
+  mathjaxCDN: "//cdnjs.cloudflare.com/ajax/libs"
+
+  jQueryVersion: "3.6.3"
+  jQueryCDN: "//cdnjs.cloudflare.com/ajax/libs"
+
+  lazysizesVersion: "5.3.2"
+  lazysizesCDN: "//cdnjs.cloudflare.com/ajax/libs"
+
+  vanillaBackToTopVersion: "latest"
+  vanillaBackToTopCDN: "//cdn.jsdelivr.net/npm"
+
+markup:
+  highlight:
+    codeFences: false
+  goldmark:
+    renderer:
+      unsafe: true
+    parser:
+      autoHeadingIDType: blackfriday
+  tableOfContents:
+    startLevel: 1

@@ -1,0 +1,74 @@
+{{ partial "header.html" . }}
+
+<article class="main">
+{{ if .IsHome }}
+  <div class="index">
+    <div class="index-inner">
+      <img id="avatar" draggable="false" src="{{ .Site.Params.logo }}" title="{{ .Site.Params.title }}" width="{{ .Site.Params.imageWidth | default 80 }}"/>
+      <h1>{{ .Site.Params.title | markdownify }}</h1>
+      <span>{{ .Site.Params.subtitle | markdownify }}</span>
+      <div class="social-icons">
+      {{ range .Site.Params.socialIcons }}
+        <a class="social-icon" href="{{ .url | default "#" }}" {{ if isset . "url" }}target="_blank"{{ end }} rel="noopener noreferrer me" title="{{ .title }}">
+          {{ if and (strings.HasSuffix .icon "svg") (strings.HasPrefix .icon "/") }}
+          {{ (print "/static" .icon) | readFile | safeHTML }}
+          {{ else }}
+          <img src="{{ .icon }}" />
+          {{ end }}
+        </a>
+      {{ end }}
+      </div>
+    </div>
+  </div>
+{{ else }}
+  <div class="post-section">
+    <h1>{{ .Title }}</h1>
+  </div>
+{{ end }}
+  {{ $pages := .RegularPages }}
+  {{ if .IsHome }}
+  {{ $pages = where .Site.RegularPages "Type" "in" .Site.Params.indexSections }}
+  {{ end }}
+  {{ range $index, $page := $pages }}
+  <div class="post-entry">
+    <div class="post-entry-left">
+      <figure class="post-entry-cover">
+        <img loading="lazy" src="{{ $page.Params.cover }}" />
+      </figure>
+    </div>
+    <div class="post-entry-right">
+      <div class="post-entry-header">
+        <h2>{{ $page.Title }}</h2>
+      </div>
+      <div class="post-entry-content">
+        <p>{{ $page.Params.description | markdownify }}</p>
+      </div>
+      <div class="post-entry-footer">
+        {{ if eq $page.Type "open-source" }}
+        <span class="post-entry-badge"><img src='{{ print "https://img.shields.io/github/stars/" $page.Params.github "?style=social"}}' /></span>
+        {{ if not $page.Params.disable_github_release }}
+        <span class="post-entry-badge"><img src='{{ print "https://img.shields.io/github/release/" $page.Params.github ".svg"}}' /></span>
+        {{ end }}
+        <span class="post-entry-badge"><img src='{{ print "https://img.shields.io/github/issues/" $page.Params.github ".svg"}}' /></span>
+        {{ if $page.Params.license }}
+        <span class="post-entry-badge"><img src="{{ $page.Params.license }}" /></span>
+        {{ else }}
+        <span class="post-entry-badge"><img src='{{ print "https://img.shields.io/github/license/" $page.Params.github ".svg"}}' /></span>
+        {{ end }}
+        {{ else }}
+        {{ range $tag := $page.Params.tags }}
+        <span class="post-entry-tag">{{ $tag }}</span>
+        {{ end }}
+        {{ end }}
+      </div>
+    </div>
+    {{ if $page.Params.link }}
+    <a class="post-entry-link" href="{{ $page.Params.link }}"></a>
+    {{ else }}
+    <a class="post-entry-link" href="{{ .RelPermalink }}"></a>
+    {{ end }}
+  </div>
+  {{ end }}
+</article>
+
+{{ partial "footer.html" . }}

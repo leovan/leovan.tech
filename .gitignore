@@ -1,0 +1,28 @@
+# R Blogdown
+blogdown
+public
+/resources/_gen
+.hugo_build.lock
+
+# R Common
+.Rhistory
+.Rproj.user
+.RData
+.Ruserdata
+
+# VS Code
+.vscode
+
+# Python
+*.pyd
+*.pyc
+*.pyo
+.ipynb_checkpoints
+
+# JetBrains
+.idea
+
+# system
+.DS_Store
+*.log
+*.dump

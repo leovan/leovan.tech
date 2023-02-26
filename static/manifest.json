@@ -1,0 +1,22 @@
+{
+  "short_name": "范叶亮的技术小站",
+  "name": "范叶亮的技术小站 | Leo Van’s Technology Website",
+  "description": "范叶亮的技术小站 | Leo Van’s Technology Website",
+  "icons": [
+    {
+      "src": "/images/web/icon-192x192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/images/web/icon-512x512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "/?source=pwa",
+  "background_color": "#f6f6f6",
+  "display": "standalone",
+  "scope": "/",
+  "theme_color": "#1e1e1e"
+}
