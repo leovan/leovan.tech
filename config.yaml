@@ -1,6 +1,6 @@
 baseURL: "https://leovan.tech/"
 languageCode: "zh-cn"
-title: "范叶亮的技术小站 | Leo Van's Technology Website"
+title: "范叶亮的技术小站 | Leo Van's Technical Website"
 googleAnalytics: "G-8VPQF5ZTVD"
 ignoreFiles: [
   "\\.Rmarkdown$", "\\.Rmd$", "\\.knit\\.md$", "\\.utf8\\.md$",
@@ -26,9 +26,9 @@ menu:
 
 params:
   title: "范叶亮的技术小站"
-  subtitle: "Leo Van's Technology Website"
+  subtitle: "Leo Van's Technical Website"
   author: "范叶亮 | Leo Van"
-  description: "范叶亮的技术小站 | Leo Van's Technology Website"
+  description: "范叶亮的技术小站 | Leo Van's Technical Website"
   logo: "/images/web/avatar-light-theme.svg"
   logoWidth: 150
   footer: "Copyright &copy; 2017-{Year} [范叶亮 | Leo Van](https://leovan.me)"
