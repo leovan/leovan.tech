@@ -47,28 +47,12 @@ params:
       icon: "/images/icons/rss.svg"
       url: "/rss/"
 
-  jsCookieVersion: "3.0.5"
-  jsCookieCDN: "//cdnjs.cloudflare.com/ajax/libs"
-
   clipboardjsVersion: "2.0.11"
-  clipboardjsCDN: "//cdnjs.cloudflare.com/ajax/libs"
-
-  prismjsVersion: "1.29.0"
-  prismjsCDN: "//cdnjs.cloudflare.com/ajax/libs"
-  prismjsPluginJS: ["autoloader", "show-language", "toolbar"]
-  prismjsPluginCSS: ["toolbar"]
-
-  mathjaxVersion: "3.2.2"
-  mathjaxCDN: "//cdnjs.cloudflare.com/ajax/libs"
-
-  jQueryVersion: "3.7.0"
-  jQueryCDN: "//cdnjs.cloudflare.com/ajax/libs"
-
   lazysizesVersion: "5.3.2"
-  lazysizesCDN: "//cdnjs.cloudflare.com/ajax/libs"
-
+  mathjaxVersion: "3.2.2"
+  prismjsVersion: "1.29.0"
+  jsCookieVersion: "3.0.5"
   vanillaBackToTopVersion: "latest"
-  vanillaBackToTopCDN: "//cdn.jsdelivr.net/npm"
 
 markup:
   highlight:
