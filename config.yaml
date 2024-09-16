@@ -1,16 +1,32 @@
 baseURL: "https://leovan.tech/"
+enableEmoji: true
+hasCJKLanguage: true
+ignoreFiles:
+  - \.Rmarkdown$
+  - \.Rmd$"
+  - \.knit\.md$
+  - \.utf8\.md$
+  - _files$
+  - _cache$
+  - \.txt$
+  - \.csv$
+  - \.tsv$
+  - \.tgz$
+  - \.tar$
+  - \.gz$
+  - \.zip$
+  - \.npz$
 languageCode: "zh-cn"
 title: "范叶亮的技术小站 | Leo Van's Technical Website"
-googleAnalytics: "G-8VPQF5ZTVD"
-ignoreFiles: [
-  "\\.Rmarkdown$", "\\.Rmd$", "\\.knit\\.md$", "\\.utf8\\.md$",
-  "_files$", "_cache$", "\\.txt$", "\\.csv$", "\\.tsv$",
-  "\\.tgz$", "\\.tar$", "\\.gz$", "\\.zip$", "\\.npz$"]
-hasCJKLanguage: true
-enableEmoji: true
 rssLimit: 100
 
-disableKinds: ["taxonomy", "term"]
+services:
+  googleAnalytics:
+    ID: "G-8VPQF5ZTVD"
+
+disableKinds:
+  - "taxonomy"
+  - "term"
 
 permalinks:
   open-source: "/open-source/:slug/"
@@ -34,7 +50,8 @@ params:
   footer: "Copyright &copy; 2017-{Year} [范叶亮 | Leo Van](https://leovan.me)"
   licenseURL: "https://github.com/leovan/leovan.tech/blob/main/LICENSE"
   googleAdsense: "ca-pub-2608165017777396"
-  indexSections: ["open-source"]
+  indexSections:
+    -"open-source"
 
   socialIcons:
     - title: "个人主页"
