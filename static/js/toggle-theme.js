@@ -1,5 +1,5 @@
 function getTheme() {
-  theme = Cookies.get("theme", {path: "/"});
+  theme = Cookies.get("theme", { path: "/" });
 
   if (theme == "dark") {
     theme = "dark";
@@ -11,14 +11,15 @@ function getTheme() {
 }
 
 function setTheme(theme) {
-  Cookies.set("theme", theme, {path: "/"});
+  Cookies.set("theme", theme, { path: "/" });
 
   if (theme == "dark") {
-    document.body.classList.add('dark');
+    document.body.classList.add("dark");
     document.getElementById("avatar").src = "/images/web/avatar-dark-theme.svg";
   } else {
-    document.body.classList.remove('dark');
-    document.getElementById("avatar").src = "/images/web/avatar-light-theme.svg";
+    document.body.classList.remove("dark");
+    document.getElementById("avatar").src =
+      "/images/web/avatar-light-theme.svg";
   }
 }
 
